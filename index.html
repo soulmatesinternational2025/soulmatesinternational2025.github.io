@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Matrimonial</title>
+  <title>SoulMates International</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;500&display=swap');
 
@@ -12,14 +12,20 @@
       padding: 0;
       background: linear-gradient(135deg, #fff7f8, #ffe6eb);
       font-family: 'Montserrat', sans-serif;
-      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
+      text-align: center;
+      min-height: 100vh;
     }
 
-    .container {
-      text-align: center;
+    .content-wrapper {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      max-width: 600px;
+      width: 90%;
     }
 
     h1 {
@@ -39,6 +45,7 @@
       display: flex;
       justify-content: center;
       gap: 30px;
+      flex-wrap: wrap;
     }
 
     .btn {
@@ -58,11 +65,19 @@
       border: 3px solid #e3b5bf;
       transition: 0.25s ease;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      text-align: center;
     }
 
     .btn .icon {
       font-size: 32px;
       margin-bottom: 6px;
+    }
+
+    .btn .step {
+      margin-top: 5px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #b95c6d;
     }
 
     .btn:hover {
@@ -72,7 +87,6 @@
       box-shadow: 0 6px 16px rgba(0,0,0,0.12);
     }
 
-    /* Custom tooltip */
     .btn .tooltip {
       visibility: hidden;
       opacity: 0;
@@ -97,20 +111,13 @@
     }
 
     footer {
-      position: absolute;
-      bottom: 20px;
-      width: 100%;
-      text-align: center;
+      margin-top: 40px;
       font-size: 14px;
       color: #9b4d5a;
       font-family: 'Montserrat', sans-serif;
     }
-      /* Mobile responsiveness */
+
     @media (max-width: 600px) {
-      body {
-        padding: 20px;
-        height: auto;
-      }
       h1 {
         font-size: 32px;
       }
@@ -121,6 +128,7 @@
       .btn-row {
         flex-direction: column;
         gap: 20px;
+        align-items: center;
       }
       .btn {
         width: 110px;
@@ -135,42 +143,45 @@
         bottom: -50px;
         font-size: 13px;
       }
+      .btn .step {
+        font-size: 12px;
+      }
       footer {
         font-size: 12px;
-        bottom: 10px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="content-wrapper">
     <h1>SoulMates International</h1>
     <p class="tagline">One step closer to finding your soulmate</p>
 
     <div class="btn-row">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfi-pw0iVhAs2Vr-IxQPbyIw731RsVP3U_O-Ls9h7jQBIAeJg/viewform" target="_blank" class="btn">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfi-pw0iVhAs2Vr-IxQPbyIw731RsVP3U_O-Ls9h7jQBIAeJg/viewform?" target="_blank" class="btn">
         <div class="icon">📝</div>
         Register
+        <div class="step">Step 1</div>
         <div class="tooltip">Click to register</div>
       </a>
       <a href="#" class="btn">
         <div class="icon">💬</div>
         Discuss
+        <div class="step">Step 2</div>
         <div class="tooltip">Once you register, we will contact you to find your best match</div>
       </a>
       <a href="#" class="btn">
         <div class="icon">❤️</div>
         Connect
+        <div class="step">Step 3</div>
         <div class="tooltip">Once we have identified a suitable match, we will connect both sides</div>
       </a>
     </div>
-    <h4 class="tagline">All at no cost. This is a completely free service</h4>
-  </div>
 
-  <footer>
-    © 2025 SoulMates International — Bringing hearts together<br>
-    Questions? Email us at - soulmatesinternational2025@gmail.com
-  </footer>
+    <footer>
+      © 2025 SoulMates International — Bringing hearts together<br>
+      Questions? Email us at <a href="mailto:soulmatesinternational2025@gmail.com">soulmatesinternational2025@gmail.com</a>
+    </footer>
   </div>
 </body>
 </html>
