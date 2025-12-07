@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matrimonial</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;500&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #fff7f8, #ffe6eb);
+      font-family: 'Montserrat', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 40px;
+      color: #b95c6d;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .tagline {
+      margin-bottom: 40px;
+      font-size: 18px;
+      color: #b95c6d;
+    }
+
+    .btn-row {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .btn {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #b95c6d;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      border: 3px solid #e3b5bf;
+      transition: 0.25s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .btn .icon {
+      font-size: 32px;
+      margin-bottom: 6px;
+    }
+
+    .btn:hover {
+      border-color: #b95c6d;
+      background: #ffecef;
+      transform: scale(1.08);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+
+    /* Custom tooltip */
+    .btn .tooltip {
+      visibility: hidden;
+      opacity: 0;
+      background: #b95c6d;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      position: absolute;
+      bottom: -55px;
+      width: 180px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: 0.25s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      z-index: 10;
+    }
+
+    .btn:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      color: #9b4d5a;
+      font-family: 'Montserrat', sans-serif;
+    }
+      /* Mobile responsiveness */
+    @media (max-width: 600px) {
+      body {
+        padding: 20px;
+        height: auto;
+      }
+      h1 {
+        font-size: 32px;
+      }
+      .tagline {
+        font-size: 16px;
+        margin-bottom: 30px;
+      }
+      .btn-row {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .btn {
+        width: 110px;
+        height: 110px;
+        font-size: 16px;
+      }
+      .btn .icon {
+        font-size: 28px;
+      }
+      .btn .tooltip {
+        width: 160px;
+        bottom: -50px;
+        font-size: 13px;
+      }
+      footer {
+        font-size: 12px;
+        bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>SoulMates International</h1>
+    <p class="tagline">One step closer to finding your soulmate</p>
+
+    <div class="btn-row">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfi-pw0iVhAs2Vr-IxQPbyIw731RsVP3U_O-Ls9h7jQBIAeJg/viewform?usp=sharing&ouid=108687837383466678375" target="_blank" class="btn">
+        <div class="icon">📝</div>
+        Register
+        <div class="tooltip">Click to register</div>
+      </a>
+      <a href="#" class="btn">
+        <div class="icon">💬</div>
+        Discuss
+        <div class="tooltip">Once you register, we will contact you to find your best match</div>
+      </a>
+      <a href="#" class="btn">
+        <div class="icon">❤️</div>
+        Connect
+        <div class="tooltip">Once we have identified a suitable match, we will connect both sides</div>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 SoulMates International — Bringing hearts together<br>
+    Questions? Email us at - soulmatesinternational2025@gmail.com
+  </footer>
+  </div>
+</body>
+</html>
