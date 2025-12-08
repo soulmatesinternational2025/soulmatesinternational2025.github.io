@@ -177,11 +177,11 @@
     <p class="tagline">3 steps closer to finding your soulmate</p>
 
     <div class="btn-row">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfi-pw0iVhAs2Vr-IxQPbyIw731RsVP3U_O-Ls9h7jQBIAeJg/viewform?" target="_blank" class="btn">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfi-pw0iVhAs2Vr-IxQPbyIw731RsVP3U_O-Ls9h7jQBIAeJg/viewform" target="_blank" class="btn">
         <div class="icon">📝</div>
         Register
         <div class="step">Step 1</div>
-        <div class="tooltip">Click here to Register on Google Forms</div>
+        <div class="tooltip">Click to register on Google Forms</div>
       </a>
       <a href="#" class="btn">
         <div class="icon">💬</div>
@@ -197,8 +197,7 @@
       </a>
     </div>
 
-    
-      
+   
       <div class="rotating-messages">
   <span id="rotateText">This service is completely free</span>
 </div>
@@ -208,7 +207,6 @@
 Questions? Email us at - <a href="mailto:soulmatesinternational2025@gmail.com">soulmatesinternational2025@gmail.com</a>
  | <a href="#" id="aboutLink">About Us</a>
 </footer>
-
 <script>
 const messages = [
   "This service is completely free",
@@ -227,10 +225,10 @@ setInterval(() => {
 }, 3000);
 </script>
 <!-- About Us Modal -->
-<div id="aboutModal" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); justify-content:center; align-items:center;">
-  <div style="background:white; padding:20px; border-radius:12px; max-width:90%; max-height:90%; text-align:center; position:relative;">
+<div id="aboutModal" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:999999;"">
+  <div style="background:white; z-index:1000000; padding:20px; border-radius:12px; max-width:90%; max-height:90%; text-align:center; position:relative;">
     <span id="closeAbout" style="position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer;">&times;</span>
-    <img src="aboutus.jpg" alt="About Us" style="max-width:100%; border-radius:10px;" />
+    <img src="aboutus.jpg" alt="About Us" style="max-width:100%; max-height:80vh; object-fit:contain; border-radius:10px;" />
   </div>
 </div>
 
