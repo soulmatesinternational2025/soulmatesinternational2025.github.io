@@ -155,18 +155,33 @@
       }
     }
   </style>
+<style>
+.rotating-messages {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #7a4e4e;
+  overflow: hidden;
+  height: 30px;
+}
+.fade {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+</style>
 </head>
 <body>
   <div class="content-wrapper">
     <h1>SoulMates International</h1>
-    <p class="tagline">One step closer to finding your soulmate</p>
+    <p class="tagline">3 steps closer to finding your soulmate</p>
 
     <div class="btn-row">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfi-pw0iVhAs2Vr-IxQPbyIw731RsVP3U_O-Ls9h7jQBIAeJg/viewform?" target="_blank" class="btn">
+      <a href="#" target="_blank" class="btn">
         <div class="icon">📝</div>
         Register
         <div class="step">Step 1</div>
-        <div class="tooltip">Click to register</div>
+        <div class="tooltip">Register via Google forms</div>
       </a>
       <a href="#" class="btn">
         <div class="icon">💬</div>
@@ -183,9 +198,31 @@
     </div>
 
     <footer>
-      © 2025 SoulMates International — Bringing hearts together<br>
-      Questions? Email us at <a href="mailto:soulmatesinternational2025@gmail.com">soulmatesinternational2025@gmail.com</a>
-    </footer>
-  </div>
+      
+      <div class="rotating-messages">
+  <span id="rotateText">This service is completely free</span>
+	</div>
+<footer>
+© 2025 SoulMates International — Bringing hearts together<br>
+Questions? Email us at - soulmatesinternational2025@gmail.com
+</footer>
+
+<script>
+const messages = [
+  "This service is completely free",
+  "100% confidentiality",
+  "Any questions, email us"
+];
+let index = 0;
+const textEl = document.getElementById("rotateText");
+setInterval(() => {
+  textEl.classList.add("fade");
+  setTimeout(() => {
+    index = (index + 1) % messages.length;
+    textEl.textContent = messages[index];
+    textEl.classList.remove("fade");
+  }, 600);
+}, 3000);
+</script>
 </body>
 </html>
