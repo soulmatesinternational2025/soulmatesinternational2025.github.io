@@ -91,22 +91,22 @@
     }
 
     .btn .tooltip {
-      visibility: hidden;
-      opacity: 0;
-      background: #b95c6d;
-      color: white;
-      padding: 8px 12px;
-      border-radius: 8px;
-      font-size: 14px;
-      position: absolute;
-      bottom: -65px;
-      left: 50%;
-      transform: translateX(-50%);
-      transition: 0.25s ease;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      z-index: 10;
-      pointer-events: none;
-    }
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 99999 !important;
+  width: 180px;
+  left: 50%;
+  top: -20px;
+  transform: translate(-50%, -100%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
 
     .btn:hover .tooltip {
       visibility: visible;
@@ -159,7 +159,7 @@
 <body>
   <div class="content-wrapper">
     <h1>SoulMates International</h1>
-    <p class="tagline">3 steps closer to finding your soulmate</p>
+    <p class="tagline">One step closer to finding your soulmate</p>
 
     <div class="btn-row">
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSfi-pw0iVhAs2Vr-IxQPbyIw731RsVP3U_O-Ls9h7jQBIAeJg/viewform?" target="_blank" class="btn">
