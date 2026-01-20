@@ -25,12 +25,7 @@
   }],
   "sameAs": []
 }
-    function isMobile() {
-    return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent);
-  }
-
-  const email = "soulmatesinternational2025@gmail.com";
-
+    const email = "soulmatesinternational2025@gmail.com";
   const subject = encodeURIComponent("Matrimony profile details");
 
   const body = encodeURIComponent(
@@ -61,16 +56,19 @@ Partner preference: <Write in detail what preferences you are looking for>`
 
   const btn = document.getElementById("submitEmailBtn");
 
-  if (isMobile()) {
-    // 📱 Mobile → open email app
-    btn.href = mailtoLink;
-  } else {
-    // 🖥 Desktop → show email instead of broken mailto
-    btn.addEventListener("click", function (e) {
-      e.preventDefault();
-      alert("Please send an email to:\n\n" + email);
-    });
-  }
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // Attempt to open mail app
+    window.location.href = mailtoLink;
+
+    // Fallback after 800ms if nothing happens
+    setTimeout(() => {
+      if (!document.hidden) {
+        alert("Please send an email to:\n\n" + email);
+      }
+    }, 800);
+  });
 </script>
 
   <title>SoulMates International – Find Your Perfect Match</title>
