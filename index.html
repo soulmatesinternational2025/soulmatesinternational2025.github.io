@@ -10,7 +10,7 @@
 
   gtag('config', 'G-TRZX8LD5C9');
 </script>
-  <script>
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -25,51 +25,8 @@
   }],
   "sameAs": []
 }
-    const email = "soulmatesinternational2025@gmail.com";
-  const subject = encodeURIComponent("Matrimony profile details");
-
-  const body = encodeURIComponent(
-`Name of the prospective Bride/Groom :
-
-Age:
-
-Gender:
-
-Height:
-
-Educational Qualification:
-
-Present Job and Location:
-
-Religion:
-
-Marital Status:
-
-Contact Number:
-
-Profile submitted by:
-
-Partner preference: <Write in detail what preferences you are looking for>`
-  );
-
-  const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
-
-  const btn = document.getElementById("submitEmailBtn");
-
-  btn.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    // Attempt to open mail app
-    window.location.href = mailtoLink;
-
-    // Fallback after 800ms if nothing happens
-    setTimeout(() => {
-      if (!document.hidden) {
-        alert("Please send an email to:\n\n" + email);
-      }
-    }, 800);
-  });
 </script>
+
 
   <title>SoulMates International – Find Your Perfect Match</title>
 <meta name="description" content="SoulMates International is a free, confidential matchmaking service helping individuals find their ideal life partner with trust and care.">
@@ -252,6 +209,61 @@ Partner preference: <Write in detail what preferences you are looking for>`
 }
 </style>
 </head>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const email = "soulmatesinternational2025@gmail.com";
+    const subject = encodeURIComponent("Matrimony profile details");
+
+    const body = encodeURIComponent(
+`Name of the prospective Bride/Groom :
+
+Age:
+
+Gender:
+
+Height:
+
+Educational Qualification:
+
+Present Job and Location:
+
+Religion:
+
+Marital Status:
+
+Contact Number:
+
+Profile submitted by:
+
+Partner preference: <Write in detail what preferences you are looking for>`
+    );
+
+    const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
+    const btn = document.getElementById("submitEmailBtn");
+
+    if (!btn) return;
+
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // Try opening mail app
+      window.location.href = mailtoLink;
+
+      // Desktop fallback
+      setTimeout(() => {
+        if (!document.hidden) {
+          window.open(
+            `https://mail.google.com/mail/?view=cm&to=${email}&su=${subject}&body=${body}`,
+            "_blank"
+          );
+        }
+      }, 700);
+    });
+
+  });
+</script>
+  
 <body>
   <div class="content-wrapper">
     <h1>SoulMates International</h1>
