@@ -244,25 +244,27 @@ Partner preference: <Write in detail what preferences you are looking for>`
 
     if (!btn) return;
 
+    // Better mobile detection
+    const isTouchDevice =
+      'ontouchstart' in window ||
+      navigator.maxTouchPoints > 0 ||
+      navigator.msMaxTouchPoints > 0;
+
     btn.addEventListener("click", function (e) {
       e.preventDefault();
 
-      // Try opening mail app
-      window.location.href = mailtoLink;
-
-      // Desktop fallback
-      setTimeout(() => {
-        if (!document.hidden) {
-          window.open(
-            `https://mail.google.com/mail/?view=cm&to=${email}&su=${subject}&body=${body}`,
-            "_blank"
-          );
-        }
-      }, 700);
+      if (isTouchDevice) {
+        // 📱 Mobile / tablet → open email app
+        window.location.href = mailtoLink;
+      } else {
+        // 🖥 Desktop → show message ONLY
+        alert("Send your profile to:\n\n" + email);
+      }
     });
 
   });
 </script>
+
   
 <body>
   <div class="content-wrapper">
