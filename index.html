@@ -210,12 +210,12 @@
 </style>
 </head>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-    const email = "soulmatesinternational2025@gmail.com";
-    const subject = encodeURIComponent("Matrimony profile details");
+  const email = "soulmatesinternational2025@gmail.com";
 
-    const body = encodeURIComponent(
+  const subject = encodeURIComponent("Matrimony profile details");
+  const body = encodeURIComponent(
 `Name of the prospective Bride/Groom :
 
 Age:
@@ -237,32 +237,37 @@ Contact Number:
 Profile submitted by:
 
 Partner preference: <Write in detail what preferences you are looking for>`
+  );
+
+  const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
+  const btn = document.getElementById("submitEmailBtn");
+
+  if (!btn) return;
+
+  // TRUE phone detection (not tablets, not touch laptops)
+  function isPhone() {
+    return (
+      window.matchMedia("(max-width: 768px)").matches &&
+      (
+        navigator.userAgentData?.mobile === true ||
+        /Android|iPhone|iPod/i.test(navigator.userAgent)
+      )
     );
+  }
 
-    const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
-    const btn = document.getElementById("submitEmailBtn");
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
 
-    if (!btn) return;
-
-    // Better mobile detection
-    const isTouchDevice =
-      'ontouchstart' in window ||
-      navigator.maxTouchPoints > 0 ||
-      navigator.msMaxTouchPoints > 0;
-
-    btn.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      if (isTouchDevice) {
-        // 📱 Mobile / tablet → open email app
-        window.location.href = mailtoLink;
-      } else {
-        // 🖥 Desktop → show message ONLY
-        alert("Send your profile to:\n\n" + email);
-      }
-    });
-
+    if (isPhone()) {
+      // 📱 Phones ONLY
+      window.location.href = mailtoLink;
+    } else {
+      // 🖥 Desktop / Laptop / Tablet
+      alert("Send your profile to:\n\n" + email);
+    }
   });
+
+});
 </script>
 
   
